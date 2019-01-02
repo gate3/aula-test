@@ -1,0 +1,4 @@
+music/
+uploads/
+*.log
+node_modules/
