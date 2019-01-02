@@ -82,6 +82,7 @@ There is still a lot to do to make this the finished article
 - Make sure the tests run properly 
 - Make a helper for returning success or failure response so code can stay dry
 - Use a crypto function for forming filename of songs
+- Include a docker file for easy deployment
 
 
 ## Contributing
