@@ -3,20 +3,29 @@
  */
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-const {SUCCESS_MESSAGE, ERROR} = require('../helpers/strings');
 const {MUSIC_FILES_PATH} = require('../helpers/constants');
+const Utils = require('../helpers/utils');
 const asyncReadFile = path => new Promise((resolve, reject)=> fs.readFile(path, (err, data) => err ? reject(err):resolve(data)));
 
-const upload = async (file, name) => {
-    await mkdirp(`./${MUSIC_FILES_PATH}`);
+const upload = async (file) => {
+	await mkdirp(`./${MUSIC_FILES_PATH}`);
 	return new Promise(async (resolve, reject) => {
 		const buffer = await asyncReadFile(file.path); 
 		const newFilename = `${Date.now()}-${file.originalname}`;
 		fs.writeFile(`./${MUSIC_FILES_PATH}/${newFilename}`, buffer, (err) => {
 			if(err) {
-				return reject({status:false, message: ERROR.UPLOAD, data: err});
+				return reject({
+					status:false, 
+					data: err
+				});
 			}
-			return resolve({status: true, message: SUCCESS_MESSAGE.UPLOAD, data: {newFilename}});
+			return resolve({
+				status: true, 
+				data: {
+					fileUrl: Utils.getMusicUrl(newFilename),
+					newFilename,
+				}
+			});
 		});
 	});
 };

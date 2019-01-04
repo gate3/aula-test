@@ -1,17 +1,15 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
+const mws = require('./middlewares');
 
 const logger = require('./app/helpers/logger.helper');
 const routes = require('./app/routes');
 
 app.use('/music', express.static(__dirname + '/music'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use((req, res, next) => {
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-	next();
-});
+
+app.use(mws);
 
 // Routes Begin 
 app.use(routes);

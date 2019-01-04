@@ -5,22 +5,22 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha ./app/tests --recursive"
+    "test": "jest app"
   },
   "author": "Doyin Olarewaju",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "6.2.0",
     "express": "4.16.4",
+    "helmet": "3.15.0",
     "lowdb": "1.0.0",
     "multer": "1.4.1",
     "music-metadata": "3.4.1",
     "winston": "3.1.0"
   },
   "devDependencies": {
-    "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
     "eslint": "5.11.1",
-    "mocha": "5.2.0",
-    "sinon": "7.2.2"
+    "jest": "23.6.0"
   }
 }

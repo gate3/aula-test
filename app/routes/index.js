@@ -1,7 +1,7 @@
 const express = require('express');
 const api = express.Router();
 
-const songsRoute = require('./music.route');
+const songsRoute = require('../components/music/music.route');
 
 api.use(songsRoute);
 

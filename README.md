@@ -69,6 +69,7 @@ Send a GET request to
 - Multer (For File Uploads)
 - Music-MetaData
 - Mocha, Chai and Sinon
+- Winston for logging
 
 ## Todo
 There is still a lot to do to make this the finished article
@@ -83,6 +84,8 @@ There is still a lot to do to make this the finished article
 - Make a helper for returning success or failure response so code can stay dry
 - Use a crypto function for forming filename of songs
 - Include a docker file for easy deployment
+- Use a logging service like ELK stack for loggin errors
+- Split My Networking concern like creating the server into a seperate file
 
 
 ## Contributing

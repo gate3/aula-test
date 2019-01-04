@@ -5,7 +5,8 @@ const ERROR = {
 		NAME_ONLY: 'Please provide a music file name.',
 	},
 	UPLOAD: 'Error occurred uploading this song.',
-	FATAL: 'An error occurred fetching this song. Please try again or contact  our team.'
+	FATAL: 'An error occurred fetching this song. Please try again or contact  our team.',
+	NOT_FOUND: 'Music not found.',
 };
 
 const SUCCESS_MESSAGE = {
