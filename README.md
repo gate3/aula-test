@@ -41,6 +41,13 @@ Send a POST request to
 <site-url>/v1/music/
 ```
 
+The POST body should contain the following:
+
+- file : Which is the file to be uploaded 
+- name : The name you wish to give the file
+
+
+
 > Where <site-url> is the url (including port if applicable) that the backend is running on. 
 
 
