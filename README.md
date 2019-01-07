@@ -83,7 +83,7 @@ Send a GET request to
 - ExpressJs
 - LowDb (As a localDB)
 - Multer (For File Uploads)
-- Music-MetaData
+- Music-MetaData (npm package)
 - Jest
 - Winston for logging
 
