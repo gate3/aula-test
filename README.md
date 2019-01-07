@@ -84,7 +84,7 @@ Send a GET request to
 - LowDb (As a localDB)
 - Multer (For File Uploads)
 - Music-MetaData
-- Mocha, Chai and Sinon
+- Jest
 - Winston for logging
 
 ## Todo
