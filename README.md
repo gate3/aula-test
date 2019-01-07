@@ -26,6 +26,14 @@ node server.js or npm start
 ```
 The app should be running now. You are good to go. 
 
+## Testing 
+
+Just run 
+
+```bash
+npm test
+```
+
 ## Usage
 
 The backend currently has three functionalities
