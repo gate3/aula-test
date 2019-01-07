@@ -44,7 +44,7 @@ Send a POST request to
 
 The POST body should contain the following:
 
-- file : Which is the file to be uploaded 
+- music_file : Which is the file to be uploaded 
 - name : The name you wish to give the file
 
 
